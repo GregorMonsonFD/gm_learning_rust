@@ -1,4 +1,5 @@
 use std::io;
+use std::time::{Duration, Instant};
 // use std::env;
 use std::collections::HashMap;
 
@@ -14,8 +15,6 @@ fn fibbonaci_seed(first_value: u128, second_value: u128) -> HashMap<u128, u128> 
 }
 
 fn fibonacci_adder(mut fibbonaci_hashmap: HashMap<u128, u128>, requested_index: u128, count: u128) -> HashMap<u128, u128> {
-    
-    // println!("{}", *fibbonaci_hashmap.get(&1).unwrap());
 
     let previous_fib_number:u128;
     let curent_fib_number:u128;
@@ -57,5 +56,10 @@ fn main() {
     io::stdin().read_line(&mut input).unwrap();
     let index: u128 = input.trim().parse().expect("Input not an integer");
 
+    let start = Instant::now();
     println!("Index {} = {}", index, fibonacci_call_index(index));
+
+    let duration = start.elapsed();
+
+    println!("Time elapsed in fibonacci_call_index() is: {:?}", duration);
 }
