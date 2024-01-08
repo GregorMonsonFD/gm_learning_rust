@@ -1,0 +1,9 @@
+[workspace]
+
+[package]
+name = "Fibonacci" # the name of the package
+version = "0.1.0"    # the current version, obeying semver
+authors = ["Gregor Monson <gregormonson@gmail.com>"]
+
+[dependencies]
+num = "0.4.1"
