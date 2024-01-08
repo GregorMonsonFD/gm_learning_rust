@@ -28,7 +28,7 @@ fn fibonacci_adder(mut fibbonaci_hashmap: HashMap<u32, BigUint>, requested_index
     curent_fib_number = fibbonaci_hashmap.get(&(count + 1)).unwrap().clone();
     next_fib_number = previous_fib_number.clone() + curent_fib_number.clone();
 
-    println!("{}, {}, {}", previous_fib_number, curent_fib_number, next_fib_number);
+    // println!("{}, {}, {}", previous_fib_number, curent_fib_number, next_fib_number);
 
     fibbonaci_hashmap.insert(count + 2, next_fib_number);
 
