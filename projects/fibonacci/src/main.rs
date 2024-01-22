@@ -14,19 +14,14 @@ fn fibbonaci_seed(first_value: BigUint, second_value: BigUint) -> HashMap<u32, B
     fibbonaci_hashmap.insert(0, first_value);
     fibbonaci_hashmap.insert(1, second_value);
 
-    return fibbonaci_hashmap;
-
+    fibbonaci_hashmap
 }
 
 fn fibonacci_adder(mut fibbonaci_hashmap: HashMap<u32, BigUint>, requested_index: u32, count: u32) -> HashMap<u32, BigUint> {
-
-    let previous_fib_number:BigUint;
-    let curent_fib_number:BigUint;
-    let next_fib_number:BigUint;
     
-    previous_fib_number = fibbonaci_hashmap.get(&(count)).unwrap().clone();
-    curent_fib_number = fibbonaci_hashmap.get(&(count + 1)).unwrap().clone();
-    next_fib_number = previous_fib_number.clone() + curent_fib_number.clone();
+    let previous_fib_number = fibbonaci_hashmap.get(&(count)).unwrap().clone();
+    let curent_fib_number = fibbonaci_hashmap.get(&(count + 1)).unwrap().clone();
+    let next_fib_number = previous_fib_number.clone() + curent_fib_number.clone();
 
     // println!("{}, {}, {}", previous_fib_number, curent_fib_number, next_fib_number);
 
@@ -41,7 +36,7 @@ fn fibonacci_adder(mut fibbonaci_hashmap: HashMap<u32, BigUint>, requested_index
         )
     };
 
-    return fibbonaci_hashmap;
+    fibbonaci_hashmap
 }
 
 fn fibonacci_call_index(index: u32) -> BigUint {
