@@ -2,4 +2,4 @@
 
 members = [
     "projects/fibonacci"
-]
+, "projects/problem_26"]
